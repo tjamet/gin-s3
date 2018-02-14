@@ -28,3 +28,7 @@
 [[constraint]]
   name = "github.com/gin-gonic/gin"
   version = "1.2.0"
+
+[[constraint]]
+  name = "github.com/docopt/docopt-go"
+  version = "0.6.2"

@@ -3,9 +3,15 @@
 
 [[projects]]
   name = "github.com/aws/aws-sdk-go"
-  packages = ["aws","aws/awserr","aws/awsutil","aws/client","aws/client/metadata","aws/credentials","aws/endpoints","aws/request","aws/signer/v4","internal/shareddefaults","private/protocol","private/protocol/query","private/protocol/query/queryutil","private/protocol/rest","private/protocol/restxml","private/protocol/xml/xmlutil","service/s3"]
+  packages = ["aws","aws/awserr","aws/awsutil","aws/client","aws/client/metadata","aws/corehandlers","aws/credentials","aws/credentials/ec2rolecreds","aws/credentials/endpointcreds","aws/credentials/stscreds","aws/defaults","aws/ec2metadata","aws/endpoints","aws/request","aws/session","aws/signer/v4","internal/shareddefaults","private/protocol","private/protocol/query","private/protocol/query/queryutil","private/protocol/rest","private/protocol/restxml","private/protocol/xml/xmlutil","service/s3","service/sts"]
   revision = "35d933260a22b7435667bd957f422029f6012e98"
   version = "v1.12.76"
+
+[[projects]]
+  name = "github.com/docopt/docopt-go"
+  packages = ["."]
+  revision = "784ddc588536785e7299f7272f39101f7faccc3f"
+  version = "0.6.2"
 
 [[projects]]
   branch = "master"
@@ -69,6 +75,6 @@
 [solve-meta]
   analyzer-name = "dep"
   analyzer-version = 1
-  inputs-digest = "6ec2a1bb21a95800760cbf12b125146851c9da323aaca9ae0f1bf5c11c76c9a9"
+  inputs-digest = "aa47f5cda8762d5e835234a6c6b873da5876928da6ba6fd195966b986ea287b6"
   solver-name = "gps-cdcl"
   solver-version = 1
