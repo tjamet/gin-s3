@@ -1,0 +1,24 @@
+language: go
+sudo: true
+
+service: docker
+
+go:
+  - 1.8.x
+  - 1.9.x
+  - tip
+
+# Use a commited vendor, no need to go get
+install: 
+- true
+script:
+  - go test -v -covermode=atomic -coverprofile=coverage.out
+after_success:
+- bash <(curl -s https://codecov.io/bash)
+after_failure:
+- bash <(curl -s https://codecov.io/bash)
+coverage:
+  notify:
+    gitter:
+      default:
+        url: https://webhooks.gitter.im/e/d90dcdeeab2f1e357165
